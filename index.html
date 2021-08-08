@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link href="styles.css" rel="stylesheet" />
+
+    <title>Frontend Mentor | FAQ Accordion Card</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="image-container">
+        <picture>
+          <source
+            media="(max-width: 1023px)"
+            srcset="images/illustration-woman-online-mobile.svg"
+          />
+          <source
+            media="(min-width: 1024px)"
+            srcset="images/illustration-woman-online-desktop.svg"
+          />
+          <img
+            src="images/illustration-woman-online-mobile.svg"
+            class="illustration"
+            id="illustration"
+            alt="woman in front of monitor"
+          />
+        </picture>
+        <div class="box"></div>
+      </div>
+      <div class="q-and-a">
+        <h1>FAQ</h1>
+        <button class="question">How many team members can I invite?</button>
+        <div class="answer">
+          <p>
+            You can invite up to 2 additional users on the Free plan. There is
+            no limit on team members for the Premium plan.
+          </p>
+          <br />
+        </div>
+
+        <button class="question">What is the maximum file upload size?</button>
+        <div class="answer">
+          <p>
+            No more than 2GB. All files in your account must fit your allotted
+            storage space.
+          </p>
+          <br />
+        </div>
+
+        <button class="question">How do I reset my password?</button>
+        <div class="answer">
+          <p>
+            Click “Forgot password” from the login page or “Change password”
+            from your profile page.
+          </p>
+          <p>A reset link will be emailed to you.</p>
+          <br />
+        </div>
+
+        <button class="question">Can I cancel my subscription?</button>
+        <div class="answer">
+          <p>
+            Yes! Send us a message and we’ll process your request no questions
+            asked.
+          </p>
+          <br />
+        </div>
+
+        <button class="question">Do you provide additional support?</button>
+        <div class="answer">
+          <p>
+            Chat and email support is available 24/7. Phone lines are open
+            during normal business hours.
+          </p>
+          <br />
+        </div>
+      </div>
+      <!-- close q-and-a -->
+    </div>
+    <!-- close container-->
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://www.frontendmentor.io/profile/Infinity-Mineeva"
+        >Sonji Goodman</a
+      >.
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

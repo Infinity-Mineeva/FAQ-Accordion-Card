@@ -1,0 +1,173 @@
+/* RESET STYLES */
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  font-family: "Kumbh Sans", sans-serif;
+  box-sizing: border-box;
+}
+
+/* VARIABLES */
+
+:root {
+  --dark-blue: hsl(238, 29%, 16%);
+  --soft-red: hsl(14, 88%, 65%);
+  --soft-violet: hsl(273, 75%, 66%);
+  --soft-blue: hsl(240, 73%, 65%);
+  --vd-grey-blue: hsl(237, 12%, 33%);
+  --dark-grey-blue: hsl(240, 6%, 50%);
+  --light-grey-blue: hsl(240, 5%, 91%);
+}
+
+/* BACKGROUND */
+
+body,
+html {
+  background: rgb(175, 103, 233);
+  background: linear-gradient(
+    180deg,
+    rgba(175, 103, 233, 1) 50%,
+    rgba(101, 101, 231, 1) 100%
+  );
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CONTAINER */
+
+.container {
+  width: 326px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 2px 20px 30px hsl(256, 50%, 52%);
+}
+
+.image-container {
+  background: url("../images/bg-pattern-mobile.svg");
+  height: 130px;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.illustration {
+  position: relative;
+  left: 5%;
+  bottom: 105px;
+}
+
+.q-and-a {
+  width: 285px;
+  margin: 0 auto;
+  margin-bottom: 3em;
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+/* BUTTON STYLES */
+
+.question {
+  background: none;
+  border: none;
+  color: var(--vd-grey-blue);
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  padding: 1em 0;
+}
+
+.question:after {
+  content: url("../images/icon-arrow-down.svg");
+  float: right;
+  font-weight: 700;
+  color: var(--soft-red);
+}
+
+.active {
+  font-weight: 700;
+}
+
+.active:after {
+  content: url("../images/icon-arrow-down.svg");
+  transform: rotate(180deg);
+}
+
+/* ANSWER STYLES */
+.answer {
+  line-height: 1.5em;
+  position: relative;
+  color: var(--dark-grey-blue);
+  max-height: 0;
+  overflow: hidden;
+  border-bottom: 1px solid var(--light-grey-blue);
+  transition: max-height 0.2s ease-out;
+}
+
+/* ATTRIBUTION */
+.attribution {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* MEDIA QUERY - DESKTOP */
+
+@media screen and (min-width: 1024px) {
+  .container {
+    width: 920px;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .image-container {
+    position: relative;
+    background: url("../images/bg-pattern-desktop.svg") no-repeat;
+    flex: 0 0 50%;
+    height: 500px;
+    background-attachment: fixed;
+    background-position: -120% -8em;
+    background-size: 75% 100%;
+  }
+
+  .illustration {
+    position: absolute;
+    left: -15%;
+    bottom: 20%;
+    clip-path: inset(0 0 0 14%);
+  }
+
+  .box {
+    position: absolute;
+    bottom: -35%;
+    left: -18%;
+    background: url("../images/illustration-box-desktop.svg") no-repeat;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  h1 {
+    text-align: left;
+    margin-top: 5em;
+  }
+
+  .q-and-a {
+    position: relative;
+    width: 350px;
+    align-self: center;
+    bottom: 20px;
+  }
+}
